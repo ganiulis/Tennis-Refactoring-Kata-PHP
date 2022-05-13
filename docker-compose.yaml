@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./app:/srv/app
+      - ./docker/php/xdebug.ini:/usr/local/etc/xdebug.ini
+    working_dir: /srv/app
